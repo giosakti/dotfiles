@@ -1,0 +1,7 @@
+[user]
+	email = giosakti@gmail.com
+	name = Giovanni Sakti
+[credential]
+	helper = cache --timeout 7200
+[push]
+	default = simple
