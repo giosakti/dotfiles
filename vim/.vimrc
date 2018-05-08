@@ -57,6 +57,9 @@ set laststatus=2
 set showmode
 set showcmd
 
+" Move swap files to different directory
+set directory=~/.vim/swapfiles//
+
 " Searching
 " nnoremap / /\v
 " vnoremap / /\v
