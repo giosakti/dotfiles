@@ -88,3 +88,6 @@ set splitright
 set splitbelow
 
 
+" Activate fzf
+set rtp+=~/.fzf
+

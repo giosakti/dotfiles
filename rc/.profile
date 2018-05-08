@@ -1,6 +1,9 @@
 # Set additional PATH
 export PATH=$PATH:/opt/bin
 
+# load fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # Google Cloud SDK Configuration
 if [ -f '/opt/apps/google-cloud-sdk/path.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/path.bash.inc'; fi
 if [ -f '/opt/apps/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/completion.bash.inc'; fi
