@@ -84,8 +84,4 @@ colorscheme gruvbox
 set splitright
 set splitbelow
 
-" Make CtrlP search directory changes according to NerdTree's root directory
-" https://stackoverflow.com/questions/21888869/how-to-make-ctrlps-search-directory-change-according-to-nerdtrees-root
-let g:NERDTreeChDirMode       = 2
-let g:ctrlp_working_path_mode = 'rw'
 
