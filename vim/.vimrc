@@ -87,6 +87,8 @@ colorscheme gruvbox
 set splitright
 set splitbelow
 
+"Set default NERDTree window size
+let NERDTreeWinSize = 31 
 
 " Activate fzf
 set rtp+=~/.fzf
