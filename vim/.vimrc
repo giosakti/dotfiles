@@ -83,6 +83,12 @@ set t_Co=256
 " Color scheme (terminal)
 colorscheme gruvbox 
 
+" Easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Set default split behaviour
 set splitright
 set splitbelow
@@ -102,4 +108,10 @@ endif
 nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
+
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
 
