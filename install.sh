@@ -10,5 +10,5 @@ ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/vim/.vim" ~
 mkdir -p ~/.vim/swapfiles
 
-ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
+ln -sfv "$DOTFILES_DIR/misc/.tmux.conf" ~
 
