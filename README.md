@@ -1,5 +1,16 @@
 # gio's dotfiles
 
+## Requirements
+
+1. Install ctags
+
+```
+# OSX
+
+brew install ctags
+alias ctags="`brew --prefix`/bin/ctags"
+```
+
 ## How to Apply
 
 1. Clone and `cd` into the repository
