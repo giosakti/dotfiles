@@ -93,3 +93,13 @@ let NERDTreeWinSize = 31
 " Activate fzf
 set rtp+=~/.fzf
 
+" Use ag instead of ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" Shortcuts for opening fzf
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
+
