@@ -82,6 +82,7 @@ set t_Co=256
 
 " Color scheme (terminal)
 colorscheme gruvbox 
+set background=dark    " Setting dark mode
 
 " Easier split navigations
 nnoremap <C-J> <C-W><C-J>
