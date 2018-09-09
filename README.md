@@ -6,9 +6,54 @@
 
 ```
 # OSX
-
 brew install ctags
 alias ctags="`brew --prefix`/bin/ctags"
+```
+
+2. Install bat
+
+```
+# OSX
+brew install bat
+
+# Linux
+# Download from https://github.com/sharkdp/bat/releases
+sudo dpkg -i bat_<version>_<arch>.deb
+```
+
+3. Install prettyping
+
+```
+sudo mkdir -p /opt/bin
+sudo curl -o /opt/bin/prettyping https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
+sudo chmod +x /opt/bin/prettyping
+```
+
+4. Install fd
+
+```
+# OSX
+brew install fd
+
+# Linux
+# Download from https://github.com/sharkdp/fd/releases
+sudo dpkg -i fd_<version>_<arch>.deb
+```
+
+5. Install ncdu
+
+```
+# OSX
+brew install ncdu
+
+# Linux
+sudo apt-get install ncdu
+```
+
+6. Install tldr
+
+```
+npm install -g tldr
 ```
 
 ## How to Apply
@@ -27,4 +72,4 @@ Profit.
 ## References
 
 - https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
-
+- https://remysharp.com/2018/08/23/cli-improved

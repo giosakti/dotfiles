@@ -20,3 +20,9 @@ export GOPATH="/opt/projects/golang"
 # RVM Configuration
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Aliases
+alias cat='bat'
+alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+alias help='tldr'
+alias ping='prettyping --nolegend'
