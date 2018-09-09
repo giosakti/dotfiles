@@ -14,6 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # GVM Configuration
+export PATH="$PATH:/opt/projects/golang/bin"
 [[ -s "/Users/giosakti/.gvm/scripts/gvm" ]] && source "/Users/giosakti/.gvm/scripts/gvm"
 export GOPATH="/opt/projects/golang"
 
