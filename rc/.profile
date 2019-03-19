@@ -15,7 +15,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # GVM Configuration
 export PATH="$PATH:/opt/projects/golang/bin"
-[[ -s "/Users/giosakti/.gvm/scripts/gvm" ]] && source "/Users/giosakti/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 export GOPATH="/opt/projects/golang"
 
 # RVM Configuration
