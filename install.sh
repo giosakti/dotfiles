@@ -12,3 +12,6 @@ mkdir -p ~/.vim/swapfiles
 
 ln -sfv "$DOTFILES_DIR/misc/.tmux.conf" ~
 
+mkdir -p ~/.config/i3
+ln -sfv "$DOTFILES_DIR/misc/.config/i3/config" ~/.config/i3
+
