@@ -56,6 +56,10 @@ sudo apt-get install ncdu
 npm install -g tldr
 ```
 
+7. Install wmfocus (for i3)
+
+See [this page](https://github.com/svenstaro/wmfocus) for more details.
+
 ## How to Apply
 
 1. Clone and `cd` into the repository
