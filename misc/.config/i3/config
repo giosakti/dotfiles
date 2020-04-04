@@ -175,11 +175,12 @@ bindsym $mod+Shift+h "move scratchpad"
 bindsym $mod+Shift+s "scratchpad show"
 
 # Other applications that needs to be started during start up
+exec --no-startup-id syndaemon -i 1.0 -d
 exec --no-startup-id dropbox.py start
-exec --no-startup-id "sleep 3; i3-msg 'workspace number 1; exec i3-sensible-terminal'"
-exec --no-startup-id "sleep 3; i3-msg 'workspace number 1; exec subl'"
-exec --no-startup-id "sleep 3; i3-msg 'workspace number 2; exec firefox'"
-exec --no-startup-id "sleep 3; i3-msg 'workspace number 3; exec slack'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec i3-sensible-terminal'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec subl'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 2; exec firefox'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 3; exec slack'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 1 to 1:txt'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 2 to 2:web'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 3 to 3:msg'"
