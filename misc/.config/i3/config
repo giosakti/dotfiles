@@ -174,6 +174,16 @@ bindsym $mod+q exec "wf"
 bindsym $mod+Shift+h "move scratchpad"
 bindsym $mod+Shift+s "scratchpad show"
 
+# Other applications that needs to be started during start up
+exec --no-startup-id dropbox.py start
+exec --no-startup-id "sleep 3; i3-msg 'workspace 1; exec /usr/bin/i3-sensible-terminal'"
+exec --no-startup-id "sleep 3; i3-msg 'workspace 1; exec /usr/bin/subl'"
+exec --no-startup-id "sleep 3; i3-msg 'workspace 2; exec /usr/bin/firefox'"
+exec --no-startup-id "sleep 3; i3-msg 'workspace 3; exec /snap/bin/slack'"
+exec --no-startup-id "sleep 6; i3-msg 'rename workspace 1 to 1:txt'"
+exec --no-startup-id "sleep 6; i3-msg 'rename workspace 2 to 2:web'"
+exec --no-startup-id "sleep 6; i3-msg 'rename workspace 3 to 3:msg'"
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
