@@ -54,7 +54,7 @@ npm install -g tldr
 
 1. Clone and `cd` into the repository
 2. `git submodule update --init --recursive`
-3. `./install.sh`
+3. `./reload-ubuntu.sh`
 
 Profit.
 
