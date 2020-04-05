@@ -30,3 +30,6 @@ npm install -g tldr
 - https://remysharp.com/2018/08/23/cli-improved
 - http://www.boekhoff.info/how-to-install-zsh-and-oh-my-zsh/
 - https://github.com/svenstaro/wmfocus
+- https://askubuntu.com/questions/773595/how-can-i-disable-touchpad-while-typing-on-ubuntu-16-04-syndaemon-isnt-working
+- https://ubuntuforums.org/showthread.php?t=2316240
+
