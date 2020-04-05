@@ -16,7 +16,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 # Ubuntu
 sudo apt install ctags bat ncdu fd-find
-alias fd=fdfind
 
 # OSX
 brew install ctags
@@ -68,4 +67,5 @@ Profit.
 
 - https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 - https://remysharp.com/2018/08/23/cli-improved
+- - http://www.boekhoff.info/how-to-install-zsh-and-oh-my-zsh/
 - https://github.com/svenstaro/wmfocus

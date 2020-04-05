@@ -33,6 +33,7 @@ fi
 # Aliases
 alias cat='bat'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+alias fd='fdfind'
 alias help='tldr'
 alias ping='prettyping --nolegend'
 
