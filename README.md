@@ -30,6 +30,16 @@ npm install -g tldr
 - https://remysharp.com/2018/08/23/cli-improved
 - http://www.boekhoff.info/how-to-install-zsh-and-oh-my-zsh/
 - https://github.com/svenstaro/wmfocus
+
+**Touchpad Issues**
+
 - https://askubuntu.com/questions/773595/how-can-i-disable-touchpad-while-typing-on-ubuntu-16-04-syndaemon-isnt-working
 - https://ubuntuforums.org/showthread.php?t=2316240
+- https://forum.manjaro.org/t/i3wm-how-to-disable-the-touchpad-by-default/30445/7
+- https://www.x.org/archive/X11R7.5/doc/man/man4/synaptics.4.html
+- https://askubuntu.com/questions/964242/synaptics-palm-dimensions-numbers
+- https://askubuntu.com/questions/205512/touchpad-palm-sensitivity
+- https://superuser.com/questions/277427/making-synaptics-palm-detection-work-under-ubuntu-11-04
+- https://askubuntu.com/questions/113602/add-dead-region-touchpad
+- https://askubuntu.com/questions/681642/two-finger-scrolling-causing-a-right-click-ubuntu-15-04
 
