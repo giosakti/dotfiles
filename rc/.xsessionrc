@@ -2,3 +2,4 @@ synclient RightButtonAreaLeft=0 RightButtonAreaTop=0
 synclient PalmDetect=1 PalmMinWidth=5 PalmMinZ=0
 synclient VertEdgeScroll=0
 synclient AreaLeftEdge=50 AreaRightEdge=1347 AreaTopEdge=50 AreaBottomEdge=888
+xrandr --output eDP-1 --brightness 0.7
