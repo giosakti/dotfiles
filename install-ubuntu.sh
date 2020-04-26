@@ -4,21 +4,24 @@
 export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Install zsh
-sudo apt-get install zsh curl git
+sudo apt install zsh curl git -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install additional tools
-sudo apt install ctags bat ncdu fd-find
+sudo apt install ctags bat ncdu fd-find -y
 sudo mkdir -p /opt/bin
 sudo curl -o /opt/bin/prettyping https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
 sudo chmod +x /opt/bin/prettyping
 
 # Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. ~/.profile
 
 # Install wmfocus
-sudo apt install libxcb-keysyms1 libxcb-keysyms1-dev libxkbcommon0 libcairo2 libcairo2-dev
+sudo apt install libxcb-keysyms1 libxcb-keysyms1-dev libxkbcommon0 libxkbcommon-dev libcairo2
+libcairo2-dev -y
 sudo mkdir -p /opt/projects/github.com/svenstaro
+sudo chown -R $USER:$USER /opt/projects
 cd /opt/projects/github.com/svenstaro
 git clone https://github.com/svenstaro/wmfocus.git
 cd wmfocus
