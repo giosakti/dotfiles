@@ -5,7 +5,6 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ln -sfv "$DOTFILES_DIR/rc/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/rc/.profile" ~
-ln -sfv "$DOTFILES_DIR/rc/.xprofile" ~
 ln -sfv "$DOTFILES_DIR/rc/.tmux.conf" ~
 
 mkdir -p ~/.config/i3

@@ -1,4 +1,0 @@
-# Use `cvt 1912 1120` to get newmode configuration
-xrandr --newmode "1912x1120_60.00"  178.75  1912 2040 2240 2568  1120 1123 1133 1162 -hsync +vsync
-xrandr --addmode VGA-1 1912x1120_60.00
-xrandr --output VGA-1 --mode 1912x1120_60.00
