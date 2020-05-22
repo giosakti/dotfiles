@@ -100,9 +100,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:txt"
-set $ws2 "2:web"
-set $ws3 "3:msg"
+set $ws1 "1:web"
+set $ws2 "2"
+set $ws3 "3:txt"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -182,13 +182,11 @@ bindsym $mod+Shift+s "scratchpad show"
 # Other applications that needs to be started during start up
 exec --no-startup-id syndaemon -i 1.0 -k -d
 exec --no-startup-id dropbox.py start
-exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec i3-sensible-terminal'"
-exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec subl'"
-exec --no-startup-id "sleep 5; i3-msg 'workspace number 2; exec firefox'"
-exec --no-startup-id "sleep 5; i3-msg 'workspace number 3; exec slack'"
-exec --no-startup-id "sleep 10; i3-msg 'rename workspace 1 to 1:txt'"
-exec --no-startup-id "sleep 10; i3-msg 'rename workspace 2 to 2:web'"
-exec --no-startup-id "sleep 10; i3-msg 'rename workspace 3 to 3:msg'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec firefox'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec slack'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 3; exec i3-sensible-terminal'"
+exec --no-startup-id "sleep 10; i3-msg 'rename workspace 1 to 1:web'"
+exec --no-startup-id "sleep 10; i3-msg 'rename workspace 3 to 3:txt'"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
