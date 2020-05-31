@@ -20,6 +20,12 @@ sudo chmod +x /opt/bin/prettyping
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 . ~/.profile
 
+# Install fonts
+wget -O ~/YosemiteSanFranciscoFont.zip https://github.com/supermarin/YosemiteSanFranciscoFont/archive/master.zip
+unzip ~/YosemiteSanFranciscoFont.zip
+mkdir -p ~/.fonts
+cp ~/YosemiteSanFranciscoFont-master/*.ttf ~/.fonts/
+
 # Install wmfocus
 sudo apt install libxcb-keysyms1 libxcb-keysyms1-dev libxkbcommon0 libxkbcommon-dev libcairo2
 libcairo2-dev -y
@@ -31,5 +37,16 @@ cd wmfocus
 cargo run --features i3
 sudo cp target/debug/wmfocus /usr/local/bin/
 sudo ln -s /usr/local/bin/wmfocus /usr/local/bin/wf
+
+# Install i3blocks
+sudo apt install i3blocks -y
+mkdir -p ~/.config/i3blocks
+cd ~/.config/i3blocks && git clone https://github.com/vivien/i3blocks.git blocks
+
+# Install compton
+sudo apt install compton -y
+
+# Install rofi
+sudo apt install rofi -y
 
 /bin/bash "$DOTFILES_DIR/reload-ubuntu.sh"
