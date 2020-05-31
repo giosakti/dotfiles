@@ -7,6 +7,9 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 sudo apt install zsh curl git -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Install hstr
+sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hstr
+
 # Install additional tools
 sudo apt install ctags bat ncdu fd-find -y
 sudo mkdir -p /opt/bin
