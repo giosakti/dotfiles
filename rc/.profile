@@ -31,11 +31,15 @@ if [ -d "$HOME/.cargo/bin" ] ; then
 fi
 
 # Aliases
+alias sudo='sudo '
 alias cat='bat'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
 alias fd='fdfind'
 alias help='tldr'
 alias ping='prettyping --nolegend'
+alias hh='hstr'
+alias k='kubectl'
+alias vv='govpn'
 
 # load fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
