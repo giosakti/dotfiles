@@ -32,7 +32,7 @@ fi
 
 # Aliases
 alias sudo='sudo '
-alias cat='bat'
+alias cat='batcat'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
 alias fd='fdfind'
 alias help='tldr'
