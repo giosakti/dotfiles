@@ -14,6 +14,9 @@ ln -sfv "$DOTFILES_DIR/rc/.config/i3/config" ~/.config/i3
 mkdir -p ~/.config/i3blocks
 ln -sfv "$DOTFILES_DIR/rc/.config/i3blocks/config" ~/.config/i3blocks
 
+mkdir -p ~/.config/rofi
+ln -sfv "$DOTFILES_DIR/rc/.config/rofi/config" ~/.config/rofi
+
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/vim/.vim" ~
 mkdir -p ~/.vim/swapfiles
