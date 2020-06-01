@@ -41,7 +41,8 @@ sudo ln -s /usr/local/bin/wmfocus /usr/local/bin/wf
 # Install i3blocks
 sudo apt install i3blocks -y
 mkdir -p ~/.config/i3blocks
-cd ~/.config/i3blocks && git clone https://github.com/vivien/i3blocks.git blocks
+cd ~/.config/i3blocks && git clone https://github.com/vivien/i3blocks-contrib.git blocks
+sudo apt install x11-xserver-utils xbacklight -y
 
 # Install compton
 sudo apt install compton -y

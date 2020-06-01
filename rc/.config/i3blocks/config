@@ -25,7 +25,8 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
-command=$HOME/.config/i3blocks/blocks
+# command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME
+command=~/.config/i3blocks/blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -36,11 +37,17 @@ markup=none
 # See the script for details.
 
 [volume]
-#label=♪
-label=VOL
+label=♪
+# label=VOL
 interval=once
 signal=10
 #STEP=5%
+
+[backlight]
+label=☀
+interval=20
+#STEP_SIZE=5
+#USE_SUDO=1
 
 # Memory usage
 #
@@ -103,15 +110,16 @@ signal=10
 # Battery indicator
 #
 # The battery instance defaults to 0.
-# [battery]
+[battery]
 # label=BAT
-# #label=⚡
-# interval=30
+label=⚡
+interval=30
 
 # Date Time
 #
 [time]
-command=date '+%Y-%m-%d %H:%M'
+# command=date '+%Y-%m-%d %H:%M'
+command=date '+(%m-%d) %H%M'
 interval=5
 
 # Generic media player support
