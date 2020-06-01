@@ -22,7 +22,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install fonts
 wget -O ~/YosemiteSanFranciscoFont.zip https://github.com/supermarin/YosemiteSanFranciscoFont/archive/master.zip
-unzip ~/YosemiteSanFranciscoFont.zip
+unzip ~/YosemiteSanFranciscoFont.zip -d ~/
 mkdir -p ~/.fonts
 cp ~/YosemiteSanFranciscoFont-master/*.ttf ~/.fonts/
 
