@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[[ -s "/home/giosakti/.gvm/scripts/gvm" ]] && source "/home/giosakti/.gvm/scripts/gvm"
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 # HSTR configuration
 setopt histignorespace           # skip cmds w/ leading space from history
