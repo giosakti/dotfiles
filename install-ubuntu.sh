@@ -11,7 +11,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hstr
 
 # Install additional tools
-sudo apt install ctags bat ncdu fd-find -y
+sudo apt install ctags bat ncdu fd-find silversearcher-ag -y
 sudo mkdir -p /opt/bin
 sudo curl -o /opt/bin/prettyping https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
 sudo chmod +x /opt/bin/prettyping
