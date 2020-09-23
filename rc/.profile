@@ -48,3 +48,7 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 # Google Cloud SDK Configuration
 if [ -f '/opt/apps/google-cloud-sdk/path.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/path.bash.inc'; fi
 if [ -f '/opt/apps/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/completion.bash.inc'; fi
+
+# Kubectl krew plugin manager
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
