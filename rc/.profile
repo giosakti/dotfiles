@@ -21,14 +21,18 @@ export PATH="/opt/projects/golang/bin:$PATH"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 export GOPATH="/opt/projects/golang"
 
-# RVM Configuration
-export PATH="$HOME/.rvm/bin:$PATH"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# rbenv Configuration
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
 
 # Rust Configuration
 if [ -d "$HOME/.cargo/bin" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
+    . "$HOME/.cargo/env"
 fi
+
+# Java Configuration
+export JAVA_HOME=/opt/jdk
+export PATH="/opt/jdk/bin:$PATH"
 
 # Aliases
 alias sudo='sudo '
