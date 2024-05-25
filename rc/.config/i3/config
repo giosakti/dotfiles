@@ -186,7 +186,6 @@ exec --no-startup-id syndaemon -i 1.0 -k -d
 exec_always --no-startup-id compton
 exec --no-startup-id dropbox.py start
 exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec firefox'"
-exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec slack'"
 exec --no-startup-id "sleep 5; i3-msg 'workspace number 3; exec i3-sensible-terminal'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 1 to 1:web'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 3 to 3:txt'"
