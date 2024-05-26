@@ -198,8 +198,8 @@ exec --no-startup-id "sleep 10; i3-msg 'rename workspace 1 to 1:web'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 3 to 3:txt'"
 
 # set gaps
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 5
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f

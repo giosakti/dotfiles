@@ -37,9 +37,12 @@ cargo run --features i3
 sudo cp target/debug/wmfocus /usr/local/bin/
 sudo ln -s /usr/local/bin/wmfocus /usr/local/bin/wf
 
+# Install polybar
+sudo apt install polybar -y
+sudo apt install brightnessctl feh x11-xserver-utils xbacklight -y
 
 # Install compton
-sudo apt install compton -y
+sudo apt install compton picom -y
 
 # Install rofi
 sudo apt install rofi -y
