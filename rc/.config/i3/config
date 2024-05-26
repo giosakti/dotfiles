@@ -22,16 +22,25 @@ font pango:System San Francisco Display 10
 exec --no-startup-id xset s 3600
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# Polybar configuration
+exec --no-startup-id picom -CGb --experimental-backends
+exec_always --no-startup-id feh --bg-fill $HOME/Downloads/mountains.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+set $refresh_i3status pkill -RTMIN+10 i3blocks
+bindsym $mod+F5 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym $mod+F4 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Use brightnessctl to adjust brightness.
+bindsym $mod+F2 exec brightnessctl set +2% && $refresh_i3status
+bindsym $mod+F1 exec brightnessctl set 2%- && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -183,12 +192,15 @@ bindsym $mod+Shift+s "scratchpad show"
 
 # Other applications that needs to be started during start up
 exec --no-startup-id syndaemon -i 1.0 -k -d
-exec_always --no-startup-id compton
 exec --no-startup-id dropbox.py start
 exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec firefox'"
 exec --no-startup-id "sleep 5; i3-msg 'workspace number 3; exec i3-sensible-terminal'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 1 to 1:web'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 3 to 3:txt'"
+
+# set gaps
+gaps inner 10
+gaps outer 10
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -204,16 +216,16 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 # bar
-bar {
-    status_command i3blocks
-	  position top
-    colors {
-		  background $bg-color
-	    separator #757575
-		  #                  border             background         text
-		  focused_workspace  $bg-color          $bg-color          $text-color
-		  inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		  urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+# bar {
+#     status_command i3blocks
+# 	  position top
+#     colors {
+# 		  background $bg-color
+# 	    separator #757575
+# 		  #                  border             background         text
+# 		  focused_workspace  $bg-color          $bg-color          $text-color
+# 		  inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+# 		  urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+# 	}
+# }
 

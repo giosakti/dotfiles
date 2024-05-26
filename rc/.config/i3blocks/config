@@ -38,16 +38,15 @@ markup=none
 
 [volume]
 label=♪
-# label=VOL
-interval=once
+command=amixer get Master | awk -F'[][]' '/Front Left:/ {volume=$2; status=$4} END {if (status == "off") {print "MUTE"} else {print volume}}'
+interval=5
 signal=10
-#STEP=5%
 
 [backlight]
 label=☀
-interval=20
-#STEP_SIZE=5
-#USE_SUDO=1
+command=brightnessctl i | grep 'Current brightness:' | awk '{gsub(/[()]/, "", $4); print $4}'
+interval=5
+signal=10
 
 # Memory usage
 #
@@ -111,15 +110,13 @@ interval=20
 #
 # The battery instance defaults to 0.
 [battery]
-# label=BAT
 label=⚡
 interval=30
 
 # Date Time
 #
 [time]
-# command=date '+%Y-%m-%d %H:%M'
-command=date '+(%m-%d) %H%M'
+command=date '+(%Y-%m-%d) %H:%M'
 interval=5
 
 # Generic media player support
