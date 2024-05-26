@@ -11,7 +11,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hstr
 
 # Install additional tools
-sudo apt install ctags bat ncdu fd-find silversearcher-ag -y
+sudo apt install universal-ctags bat ncdu fd-find silversearcher-ag -y
 sudo mkdir -p /opt/bin
 sudo curl -o /opt/bin/prettyping https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
 sudo chmod +x /opt/bin/prettyping
@@ -27,11 +27,10 @@ mkdir -p ~/.fonts
 cp ~/YosemiteSanFranciscoFont-master/*.ttf ~/.fonts/
 
 # Install wmfocus
-sudo apt install libxcb-keysyms1 libxcb-keysyms1-dev libxkbcommon0 libxkbcommon-dev libcairo2
-libcairo2-dev -y
-sudo mkdir -p /opt/projects/github.com/svenstaro
-sudo chown -R $USER:$USER /opt/projects
-cd /opt/projects/github.com/svenstaro
+sudo apt install libxcb-keysyms1 libxcb-keysyms1-dev libxkbcommon0 libxkbcommon-dev libcairo2 libcairo2-dev -y
+sudo mkdir -p /opt/src/github.com/svenstaro
+sudo chown -R $USER:$USER /opt/src
+cd /opt/src/github.com/svenstaro
 git clone https://github.com/svenstaro/wmfocus.git
 cd wmfocus
 cargo run --features i3
