@@ -99,7 +99,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-# HSTR configuration
-setopt histignorespace           # skip cmds w/ leading space from history
-export HSTR_CONFIG=hicolor       # get more colors

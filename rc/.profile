@@ -1,3 +1,7 @@
+# HSTR configuration
+setopt histignorespace # skip cmds w/ leading space from history
+export HSTR_CONFIG=hicolor # get more colors
+
 # Set additional PATHs
 if [ -d "/opt/bin" ] ; then
     export PATH="/opt/bin:$PATH"
@@ -14,15 +18,19 @@ fi
 # NVM Configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm
 
 # GVM Configuration
-export PATH="/opt/projects/golang/bin:$PATH"
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-export GOPATH="/opt/projects/golang"
+if [ -s "$HOME/.gvm/scripts/gvm" ] ; then
+    source "$HOME/.gvm/scripts/gvm"
+    export PATH="/opt/src/golang/bin:$PATH"
+    export GOPATH="/opt/src/golang"
+fi
 
 # rbenv Configuration
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
+if [ -x "$HOME/.rbenv/bin/rbenv" ]; then
+    eval "$($HOME/.rbenv/bin/rbenv init - zsh)"
+fi
 
 # Rust Configuration
 if [ -d "$HOME/.cargo/bin" ] ; then
@@ -31,8 +39,21 @@ if [ -d "$HOME/.cargo/bin" ] ; then
 fi
 
 # Java Configuration
-export JAVA_HOME=/opt/jdk
-export PATH="/opt/jdk/bin:$PATH"
+if [ -d "$HOME/opt/jdk" ] ; then
+    export JAVA_HOME=/opt/jdk
+    export PATH="/opt/jdk/bin:$PATH"
+fi
+
+# load fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Google Cloud SDK Configuration
+if [ -f '/opt/apps/google-cloud-sdk/path.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/opt/apps/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/completion.bash.inc'; fi
+
+# Kubectl krew plugin manager
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Aliases
 alias sudo='sudo '
@@ -49,15 +70,3 @@ alias gg='lazygit'
 alias tt='tmux attach -t dev || tmux new -s dev'
 alias vv='govpn'
 alias zz='zellij'
-
-# load fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
-# Google Cloud SDK Configuration
-if [ -f '/opt/apps/google-cloud-sdk/path.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/path.bash.inc'; fi
-if [ -f '/opt/apps/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/apps/google-cloud-sdk/completion.bash.inc'; fi
-
-# Kubectl krew plugin manager
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
