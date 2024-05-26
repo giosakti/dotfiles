@@ -36,14 +36,19 @@ export PATH="/opt/jdk/bin:$PATH"
 
 # Aliases
 alias sudo='sudo '
+
 alias cat='batcat'
+alias dd='lazydocker'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
 alias fd='fdfind'
 alias help='tldr'
 alias ping='prettyping --nolegend'
 alias hh='hstr'
 alias k='kubectl'
+alias gg='lazygit'
+alias tt='tmux attach -t dev || tmux new -s dev'
 alias vv='govpn'
+alias zz='zellij'
 
 # load fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
