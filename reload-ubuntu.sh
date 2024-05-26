@@ -12,9 +12,6 @@ ln -sfv "$DOTFILES_DIR/rc/.tmux.conf" ~
 mkdir -p ~/.config/i3
 ln -sfv "$DOTFILES_DIR/rc/.config/i3/config" ~/.config/i3
 
-mkdir -p ~/.config/i3blocks
-ln -sfv "$DOTFILES_DIR/rc/.config/i3blocks/config" ~/.config/i3blocks
-
 mkdir -p ~/.config/polybar
 ln -sfv "$DOTFILES_DIR/rc/.config/polybar/config.ini" ~/.config/polybar
 ln -sfv "$DOTFILES_DIR/rc/.config/polybar/launch.sh" ~/.config/polybar
