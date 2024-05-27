@@ -1,7 +1,3 @@
-# HSTR configuration
-setopt histignorespace # skip cmds w/ leading space from history
-export HSTR_CONFIG=hicolor # get more colors
-
 # Set additional PATHs
 if [ -d "/opt/bin" ] ; then
     export PATH="/opt/bin:$PATH"
