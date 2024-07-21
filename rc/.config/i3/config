@@ -8,7 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-set $mod Mod1
+set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -45,7 +45,7 @@ bindsym $mod+F2 exec brightnessctl set 2%-
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -184,7 +184,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # additional configurations
-bindsym Mod4+l exec i3lock --color "$bg-color"
+bindsym $mod+Ctrl+l exec i3lock --color "$bg-color"
 bindsym $mod+q exec "wf"
 bindsym $mod+Shift+h "move scratchpad"
 bindsym $mod+Shift+s "scratchpad show"
@@ -193,7 +193,7 @@ bindsym $mod+Shift+s "scratchpad show"
 exec --no-startup-id syndaemon -i 1.0 -k -d
 exec --no-startup-id dropbox.py start
 exec --no-startup-id "sleep 5; i3-msg 'workspace number 1; exec firefox'"
-exec --no-startup-id "sleep 5; i3-msg 'workspace number 3; exec i3-sensible-terminal'"
+exec --no-startup-id "sleep 5; i3-msg 'workspace number 3; exec alacritty'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 1 to 1:web'"
 exec --no-startup-id "sleep 10; i3-msg 'rename workspace 3 to 3:txt'"
 
